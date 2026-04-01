@@ -1,0 +1,13 @@
+# Generated images
+output/
+
+# Test input images
+input/*.png
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments (futuro)
+venv/
+.env/
