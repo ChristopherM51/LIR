@@ -76,11 +76,11 @@ output_path = "../output/output_step5_iterative.png"
 # Número de repetições
 # 4 iterações = 16x escala final
 
-iterations = 8
+iterations = 2
 
 # Segurança contra explosão de memória
 
-max_iterations = 8
+max_iterations = 2
 
 if iterations > max_iterations:
     raise ValueError(
