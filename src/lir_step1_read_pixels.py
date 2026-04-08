@@ -1,3 +1,17 @@
+# ==========================================================
+# LIR Step 1 — Pixel Extraction
+#
+# Reads the source image and converts it to RGB format.
+# Loads pixel data into memory for direct access.
+#
+# Purpose:
+# Establish low-level access to pixel values,
+# enabling manual reconstruction logic.
+#
+# Key concept introduced:
+# Direct pixel reading and manipulation.
+# ==========================================================
+
 from PIL import Image
 
 # Caminho da imagem

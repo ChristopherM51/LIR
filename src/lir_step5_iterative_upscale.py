@@ -1,4 +1,27 @@
+# ==========================================================
+# LIR Step 5 — Bilinear Reconstruction
+#
+# Combines horizontal and vertical interpolation
+# to fully reconstruct missing pixels.
+#
+# All intermediate positions are filled
+# using neighbor averaging.
+#
+# Purpose:
+# Achieve full 2x image reconstruction.
+#
+# Key concept introduced:
+# Bilinear-style interpolation structure.
+# ==========================================================
+
 from PIL import Image
+import time
+
+# ============================
+# INÍCIO DO CRONÔMETRO
+# ============================
+
+start_time = time.perf_counter()
 
 # ----------------------------
 # FUNÇÃO — Upscale 2x
@@ -76,11 +99,11 @@ output_path = "../output/output_step5_iterative.png"
 # Número de repetições
 # 4 iterações = 16x escala final
 
-iterations = 2
+iterations = 4
 
 # Segurança contra explosão de memória
 
-max_iterations = 2
+max_iterations = 4
 
 if iterations > max_iterations:
     raise ValueError(
@@ -119,3 +142,13 @@ for i in range(iterations):
 img.save(output_path)
 
 print("Imagem final salva em:", output_path)
+
+# ============================
+# FIM DO CRONÔMETRO
+# ============================
+
+end_time = time.perf_counter()
+
+elapsed_time = end_time - start_time
+
+print(f"Tempo de execução: {elapsed_time:.6f} segundos")

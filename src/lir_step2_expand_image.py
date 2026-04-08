@@ -1,3 +1,17 @@
+# ==========================================================
+# LIR Step 2 — Logical Pixel Mapping (2x Expansion)
+#
+# Maps original pixels into a 2x larger grid.
+# Original pixels are placed at even coordinates:
+# (x*2, y*2).
+#
+# Purpose:
+# Create structural space for reconstructed pixels.
+#
+# Key concept introduced:
+# Logical image expansion without interpolation.
+# ==========================================================
+
 from PIL import Image
 
 # Caminhos

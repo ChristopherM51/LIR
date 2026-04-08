@@ -1,6 +1,20 @@
-# LIR Step 6
-# Adaptive gradient interpolation using full-pixel RGB averaging.
-# Gradient dominance applied to averaged RGB values.
+# ==========================================================
+# LIR Step 6 — Adaptive Gradient Interpolation (Full Pixel)
+#
+# Introduces gradient-based interpolation logic.
+# Instead of fixed averaging, interpolation weights
+# are adjusted based on pixel value differences.
+#
+# The gradient decision is applied to the
+# averaged RGB value of the full pixel.
+#
+# Purpose:
+# Improve edge preservation using directional
+# dominance logic.
+#
+# Key concept introduced:
+# Threshold-based adaptive interpolation.
+# ==========================================================
 
 from PIL import Image
 

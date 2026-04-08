@@ -1,3 +1,21 @@
+# ==========================================================
+# LIR Step 7 — Per-Channel Adaptive Gradient Interpolation
+#
+# Upgrades adaptive interpolation to operate
+# independently per RGB channel.
+#
+# Each channel (R, G, B) evaluates gradient
+# direction and applies adaptive weighting
+# individually.
+#
+# Purpose:
+# Improve color accuracy and edge fidelity
+# by avoiding uniform RGB blending.
+#
+# Key concept introduced:
+# Channel-level directional interpolation.
+# ==========================================================
+
 from PIL import Image
 
 # ============================

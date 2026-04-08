@@ -1,3 +1,19 @@
+# ==========================================================
+# LIR Step 3 — Horizontal Interpolation
+#
+# Reconstructs missing pixels between known
+# horizontal neighbors.
+#
+# New pixels are placed between:
+# left → right
+#
+# Purpose:
+# Restore horizontal continuity.
+#
+# Key concept introduced:
+# Linear interpolation along X axis.
+# ==========================================================
+
 from PIL import Image
 
 # Caminhos

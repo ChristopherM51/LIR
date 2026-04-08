@@ -1,4 +1,27 @@
+# ==========================================================
+# LIR Step 4 — Vertical Interpolation
+#
+# Reconstructs missing pixels between known
+# vertical neighbors.
+#
+# New pixels are placed between:
+# top → bottom
+#
+# Purpose:
+# Restore vertical continuity.
+#
+# Key concept introduced:
+# Linear interpolation along Y axis.
+# ==========================================================
+
 from PIL import Image
+import time
+
+# ============================
+# INÍCIO DO CRONÔMETRO
+# ============================
+
+start_time = time.perf_counter()
 
 # Caminhos
 input_path = "../input/input.png"
@@ -60,4 +83,13 @@ print("Preenchimento completo.")
 # Salvar
 new_img.save(output_path)
 
+# ============================
+# FIM DO CRONÔMETRO
+# ============================
+
+end_time = time.perf_counter()
+
+elapsed_time = end_time - start_time
+
 print("Imagem salva em:", output_path)
+print(f"Tempo de execução: {elapsed_time:.6f} segundos")
